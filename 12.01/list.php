@@ -14,3 +14,4 @@ function theList($arr)
 }
 
 echo theList($list);
+
