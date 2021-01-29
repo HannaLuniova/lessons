@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
     // print_r($_POST);
 
     include "config.php";
-    
+
     $data = file($fileName);
 
     if (isset($_POST['answers'])) {
@@ -43,13 +44,16 @@
 
         foreach ($answers as $key => $value) {
             $count = $value[1] * 1;
-            echo " <input type='radio' value='$key' name='answers'>$value[0] ($count)<br>";
+           
+            echo " <input type='radio' value='$key' name='answers'>$value[0] 
+            <div style='height:4px; background-color: green; width: $count%' >($count)</div><br>";
         }
 
         ?>
 
         <input type="submit" value="ok">
     </form>
+    </div>
 
 </body>
 
