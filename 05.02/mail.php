@@ -13,7 +13,7 @@
 </form>
 <?php
  $str = $_POST["q"];
-$regexp = "/^[0-9A-Z_]{5,}@[0-9A-Z]{2,}\.[A-Z]{2,6}$/iu";
+$regexp = "/^[0-9A-Z_]{5,}@[0-9A-Z]{2,}\.[A-Z]{2,6}$/iu"; //‘/[^\s]+@[^\s\.]+\.[a-z]+/’;
 if (preg_match($regexp, $str)) {
     echo "yes";
 } else {
